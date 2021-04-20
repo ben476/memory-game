@@ -55,7 +55,7 @@ function Card(props) {
     <ReactCardFlip isFlipped={showing} flipDirection="vertical" containerStyle={{ height: '100%', userSelect: 'none' }}>
       <Paper
         elevation={10}
-        style={{ height: '100%', fontSize: '14vh', textAlign: 'center' }}
+        style={{ height: '100%', fontSize: '14vh', textAlign: 'center', cursor: "pointer" }}
         onClick={() => {
           if (!showing) { // Needed so that players can't click while the card is still being flipped
             if (firstSelectedCard !== undefined) { // Have to include !== undefined becuase if card index is 0 will not return true

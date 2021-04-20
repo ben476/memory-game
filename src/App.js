@@ -52,7 +52,7 @@ function Card(props) {
   }, [secondSelectedCard])
 
   return (
-    <ReactCardFlip isFlipped={showing} flipDirection="vertical" containerStyle={{ height: '100%' }}>
+    <ReactCardFlip isFlipped={showing} flipDirection="vertical" containerStyle={{ height: '100%', userSelect: 'none' }}>
       <Paper
         elevation={10}
         style={{ height: '100%', fontSize: '14vh', textAlign: 'center' }}

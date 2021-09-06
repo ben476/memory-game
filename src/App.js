@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import ReactCardFlip from 'react-card-flip';
 import emojis from './emojis';
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 function Card(props) {
   const {
@@ -54,8 +55,9 @@ function Card(props) {
   return (
     <ReactCardFlip isFlipped={showing} flipDirection="vertical" containerStyle={{ height: '100%', userSelect: 'none' }}>
       <Paper
+        component={ButtonBase}
         elevation={10}
-        style={{ height: '100%', fontSize: '14vh', textAlign: 'center', cursor: "pointer" }}
+        style={{ height: '100%', width: '100%', fontSize: '14vh', textAlign: 'center' }}
         onClick={() => {
           if (!showing) { // Needed so that players can't click while the card is still being flipped
             if (firstSelectedCard !== undefined) { // Have to include !== undefined becuase if card index is 0 will not return true
@@ -66,7 +68,8 @@ function Card(props) {
             setShowing(true)
           }
         }}>
-        ❓
+        <div style={{ marginTop: '-15px' }}>❓</div>
+
       </Paper>
 
       <Paper
@@ -126,10 +129,10 @@ function Game(props) {
         <div>
           <Typography variant="h1" style={{ color: 'white', textAlign: 'center' }}>
             🎉 You&nbsp;Win 🎉
-        </Typography>
+          </Typography>
           <Typography variant="h5" style={{ color: 'white', textAlign: 'center' }}>
             Tap to play again
-        </Typography>
+          </Typography>
         </div>
       </Backdrop>
     </div>
@@ -186,7 +189,7 @@ function App() {
               To play, click on cards which are pairs.
               If you match pairs correctly, the cards will be shown permanently.
               To win, make all the cards show.
-          </Typography>
+            </Typography>
           </div>
           <div>
             <FormControl>

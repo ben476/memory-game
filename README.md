@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Epic memory game
+
+A quick and simple memory game I made for "homework" a long time ago.
+
+Check it out [here](https://memory.benhong.me/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

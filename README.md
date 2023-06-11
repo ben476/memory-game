@@ -1,6 +1,6 @@
 # Epic memory game
 
-A quick and simple memory game I made for "homework" a long time ago.
+A quick and simple memory game I made for an assignment a long time ago.
 
 Check it out [here](https://memory.benhong.me/)
 
